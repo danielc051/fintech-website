@@ -174,3 +174,19 @@ nav {
   height: 100%;
   object-fit: cover;
 }
+
+
+.testimonials-grid {
+  display: flex;
+  padding: 5rem;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--extra-light);
+}
+
+.testimonials-name {
+  padding: 1rem;
+}
