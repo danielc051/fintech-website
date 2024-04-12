@@ -2,15 +2,18 @@
 
 :root {
   --primary-color: #00c4cc;
-  --primary-color-light:#34c1bd;
+  --primary-color-light:#57e4ff;
   --primary-color-dark: #1b8d86;
-  --secondary-color: #131516;
+  --secondary-color: #142140;
   --text-dark: #333333;
   --text-light: #767268;
   --extra-light: #f8f8f8;
   --white: #ffffff;
   --max-width: 1200px;
-  --gradient: linear-gradient(to top right,#00c4cc,#333333);
+  --gradient: linear-gradient(to top right,#00c4cc, #333333);
+  --gradient-nav: linear-gradient(to top right,#00c4cc, #333333);
+  --gradient-hero: linear-gradient(to bottom right,#00c4cc,#333333);
+  
 }
 
 * {
@@ -47,7 +50,7 @@
 
 .btn-primary {
   color: var(--extra-light);
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--extra-light);
   background-color: transparent;
 }
 
@@ -85,20 +88,19 @@ body {
 }
 
 nav {
-  background-image: var(--gradient);
+  background-image: var(--gradient-nav);
 }
 
 .header-container {
-  background-image: var(--gradient);
+  background-image: var(--gradient-hero);
 }
 
 .nav-bar {
   max-width: var(--max-width);
   margin: auto;
-  padding: 2rem 1rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .nav-logo {
@@ -109,7 +111,7 @@ nav {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--extra-light);
-  background-color: var(--primary-color);
+  background-color: transparent;
 }
 
 .nav-links {
@@ -118,6 +120,7 @@ nav {
   align-items: center;
   gap: 2rem;
   font-size: 1.3rem;
+  padding-right: 2rem;
 }
 
 .link a {
@@ -131,11 +134,9 @@ nav {
 }
 
 .nav-btns {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 1rem;
 }
 
 .header-container {
@@ -172,21 +173,151 @@ nav {
 
 .header-image img {
   height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  object-fit: contain;
+  background-size: cover;
 }
 
-
-.testimonials-grid {
-  display: flex;
-  padding: 5rem;
-  gap: 2rem;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  background-color: var(--primary-color);
-  color: var(--extra-light);
-}
-
-.testimonials-name {
+/* About Section*/
+.about-section {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   padding: 1rem;
+  min-height: 100vh;
+  font-size: 1.4rem;
 }
+
+.about-image {
+  grid-row: span 2;
+  padding: 4rem 0 4rem 8rem;
+  width: 80%;
+}
+
+.about-image img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+
+}
+
+.about-subheader p{
+  align-items: center;
+  grid-row: span 2;
+}
+
+/* Features Section */
+
+
+
+/* Reviews Section */
+.reviews-title {
+  grid-row: 1;
+  grid-column: 1/6;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  background-image: var(--gradient);
+  color: var(--extra-light);
+  min-height: 120vh;
+  font-size: 1.6rem;
+}
+
+.reviews-card {
+  width: 30rem;
+  max-width: 100%;
+  margin: auto;
+}
+
+.reviews-name {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-align: left;
+  padding-top: 1rem;
+}
+
+
+/* Pricing Section */
+
+
+/* Register Section */
+
+/* Footer */
+.footer {
+  background-color: var(--secondary-color);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.footer-col p {
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.footer-col a {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--extra-light);
+  transition: 0.3s;
+}
+
+.footer-col a span {
+  margin-right: 5px;
+}
+
+.footer-col a:hover {
+  color: var(--primary-color);
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-socials span {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.footer-bar {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.footer-container {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .footer-col:nth-child(4) {
+    grid-area: 2/1/3/2;
+  }
+
+  .contact-content .form-group {
+    gap: 1rem;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
