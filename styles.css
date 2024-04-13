@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #00c4cc;
-  --primary-color-light:#57e4ff;
+  --primary-color-light: #57e4ff;
   --primary-color-dark: #1b8d86;
   --secondary-color: #142140;
   --text-dark: #333333;
@@ -10,10 +10,9 @@
   --extra-light: #f8f8f8;
   --white: #ffffff;
   --max-width: 1200px;
-  --gradient: linear-gradient(to top right,#00c4cc, #333333);
-  --gradient-nav: linear-gradient(to top right,#00c4cc, #333333);
-  --gradient-hero: linear-gradient(to bottom right,#00c4cc,#333333);
-  
+  --gradient: linear-gradient(to top right, #00c4cc, #333333);
+  --gradient-nav: linear-gradient(to top right, #00c4cc, #333333);
+  --gradient-hero: linear-gradient(to bottom right, #00c4cc, #333333);
 }
 
 * {
@@ -185,7 +184,6 @@ nav {
   padding-left: 4rem;
 }
 
-
 /* About Section*/
 .about-section {
   display: grid;
@@ -206,17 +204,37 @@ nav {
   height: 100%;
   object-fit: cover;
   border-radius: 1.5rem;
-
 }
 
-.about-subheader p{
+.about-subheader p {
   align-items: center;
   grid-row: span 2;
 }
 
 /* Features Section */
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+}
 
+.feature {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
 
+.feature p {
+  margin-top: 10px;
+}
+
+.feature-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
 /* Reviews Section */
 .reviews-section {
@@ -235,7 +253,7 @@ nav {
 
 .reviews-columns {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   font-size: 1.6rem;
 }
 
@@ -266,12 +284,11 @@ nav {
 
 /* Pricing Section */
 
-
 /* Register Section */
 .register-section {
   background-color: var(--extra-light);
   padding: 20px;
-  text-align: center; 
+  text-align: center;
   min-height: 100vh;
 }
 
@@ -289,7 +306,7 @@ nav {
 
 .register-form input {
   width: 100%;
-  padding: 15px; 
+  padding: 15px;
   margin-bottom: 20px;
   font-size: 1rem;
   border: 1px solid #ccc;
