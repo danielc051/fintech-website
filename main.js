@@ -62,3 +62,6 @@ const swiper = new Swiper(".swiper", {
   centeredSlides: true,
   spaceBetween: 30,
 });
+
+
+// About Section
