@@ -338,7 +338,7 @@ nav {
   justify-content: center; /* Center content vertically */
   align-items: flex-start; /* Align content to the left */
   margin-right: auto; /* Push content to the left */
-  max-width: 80%; /*
+  max-width: 80%;
 }
 
 .register-content h2 {
