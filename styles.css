@@ -267,7 +267,6 @@ nav {
   padding: 20px;
   min-height: 100vh;
   text-align: center; /* Center the title */
-  background-image: var(--gradient);
   padding-top: 2rem;
 }
 
@@ -295,11 +294,12 @@ nav {
 
 .review p {
   margin-bottom: 10px;
-  color: var(--extra-light);
+  color: var(--text-dark);
 }
 
 .review-name {
   font-weight: bold;
+  color: var(--secondary-color);
 }
 
 .review-icon {
@@ -308,47 +308,49 @@ nav {
   margin-bottom: 10px;
 }
 
-/* Pricing Section */
 
 /* Register Section */
+
 .register-section {
-  background-color: var(--extra-light);
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  background-image: var(--gradient);
+  min-height: 100vh; /* Minimum height of 100% of viewport height */
+}
+
+.register-image {
+  display: flex;
+  justify-content: center; /* Align content horizontally to center */
+  align-items: center; /* Align content vertically to center */
+}
+
+.register-image img {
+  max-width: 80%; /* Ensure the image fills the container */
+  max-height: 80vh; /* Set maximum height to 80% of viewport height */
+  height: 100%;
+  object-fit: contain;
+}
+
+.register-content {
   padding: 20px;
-  text-align: center;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align content to the left */
+  margin-right: auto; /* Push content to the left */
+  max-width: 80%; /*
 }
 
-.register-form {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: left;
+.register-content h2 {
+  font-size: 3rem; /* Set font size for h2 */
 }
 
-.register-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 1rem;
+.register-content p {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
-.register-form input {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
-
-.register-form input[type="submit"] {
-  background-color: var(--secondary-color);
-  color: white;
-  cursor: pointer;
-}
-
-.register-form input[type="submit"]:hover {
-  background-color: #45a049;
-}
 
 /* Footer */
 .footer {
